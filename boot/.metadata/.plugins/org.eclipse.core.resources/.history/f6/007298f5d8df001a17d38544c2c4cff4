@@ -1,0 +1,22 @@
+package com.aswin.rest.webservices.restfulwebservices.basic.auth;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+
+@Configuration
+@EnableWebSecurity
+public class SpringSecurityConfigurationBasicAuth {
+
+	protected void configure(HttpSecurity http) throws Exception {
+		//logger.debug("Using default configure(HttpSecurity). If subclassed this will potentially override subclass configure(HttpSecurity).");
+
+		http
+			.authorizeRequests()
+				.anyRequest().authenticated()
+				.and()
+			.formLogin().and()
+			.httpBasic();
+	}
+	
+}

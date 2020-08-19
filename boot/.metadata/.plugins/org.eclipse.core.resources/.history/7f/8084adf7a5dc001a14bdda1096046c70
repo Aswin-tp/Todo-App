@@ -1,0 +1,38 @@
+package com.aswin.rest.webservices.restfulwebservices.todo;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class TodoHardcodedService {
+
+	private static List<Todo> todos = new ArrayList();
+	private static int idCounter =0;
+	
+	static {
+		todos.add(new Todo(++idCounter, "aswin", "Learn to dance", new Date(), false));
+		todos.add(new Todo(++idCounter, "aswin", "Learn to swim", new Date(), true));
+		todos.add(new Todo(++idCounter, "aswin", "Learn music", new Date(), false));
+	}
+	
+	public List<Todo> findAll(){
+		return todos;
+	}
+	
+	public Todo deleteById(long id) {
+		Todo todo = findById(id);
+		todos.remove(todo);
+	}
+	
+	public Todo findById(long id) {
+		for(Todo todo:todos) {
+			if(todo.getId() == id)
+				return todo;
+		}
+		return null;
+	}
+	
+}

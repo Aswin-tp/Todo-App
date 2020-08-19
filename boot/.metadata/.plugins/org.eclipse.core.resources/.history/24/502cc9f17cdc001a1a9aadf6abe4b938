@@ -1,0 +1,9 @@
+package com.aswin.rest.webservices.restfulwebservices.todo;
+
+import java.util.ArrayList;
+
+public class TodoHardcodedService {
+
+	private static List<Todo> todos = new ArrayList();
+	
+}

@@ -1,0 +1,12 @@
+package com.aswin.rest.webservices.restfulwebservices;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class TodoResource {
+	
+	public List<todo> getAllTodos(String username){
+		
+	}
+
+}

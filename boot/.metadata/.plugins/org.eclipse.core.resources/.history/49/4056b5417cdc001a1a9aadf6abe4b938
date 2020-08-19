@@ -1,0 +1,11 @@
+package com.aswin.rest.webservices.restfulwebservices.todo;
+
+import java.util.Date;
+
+public class todo {
+  private long id;
+  private String username;
+  private String description;
+  private Date targetDate;
+  private boolean isDone;
+}

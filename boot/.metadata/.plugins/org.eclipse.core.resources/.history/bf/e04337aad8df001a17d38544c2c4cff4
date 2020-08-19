@@ -1,0 +1,5 @@
+package com.aswin.rest.webservices.restfulwebservices.basic.auth;
+
+public class SpringSecurityConfigurationBasicAuth {
+
+}
